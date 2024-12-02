@@ -59,7 +59,7 @@ class ExpressionMaker implements ExpressionListener {
             sum = new Operation('+', stack.pop(), sum);
         }
         stack.push(sum);
-    }
+    } 
 
     @Override public void exitProduct(ExpressionParser.ProductContext context) {  
         // matched the primitive ('+' primitive)* rule

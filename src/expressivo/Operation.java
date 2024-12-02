@@ -62,19 +62,5 @@ class Operation implements Expression {
             new Operation('+', new Operation('*', dLeft, right), new Operation('*', left, dRight));
     }
 
-    @Override public Expression simplify(Map<String, Double> environment) {
-        Expression sLeft = left.simplify(environment);
-        Expression sRight = right.simplify(environment);
-
-        if (sLeft instanceof Number && sRight instanceof Number) {
-            double nLeft = ((Number)sLeft).getNumber();
-            double nRight = ((Number)sRight).getNumber();
-
-            return op == '+' ? new Number(nLeft + nRight) : new Number(nLeft * nRight);
-        }
-        else {
-            return new Operation(op, sLeft, sRight);
-        }
-    }
-
 }
+ 

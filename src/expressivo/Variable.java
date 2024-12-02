@@ -47,8 +47,5 @@ class Variable implements Expression {
         return var.equals(variable) ? new Number(1) : new Number(0);
     }
 
-    @Override public Expression simplify(Map<String, Double> environment) {
-        return environment.containsKey(var) ? new Number(environment.get(var)) : this;
-    }
 
 }
