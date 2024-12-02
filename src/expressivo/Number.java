@@ -55,5 +55,5 @@ class Number implements Expression {
     @Override public Expression differentiate(String variable) {
         return new Number(0);
     }
-
+ 
 }

@@ -45,7 +45,7 @@ class Variable implements Expression {
 
     @Override public Expression differentiate(String variable) {
         return var.equals(variable) ? new Number(1) : new Number(0);
-    }
+    } 
 
 
 }
